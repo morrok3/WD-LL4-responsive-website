@@ -1,0 +1,196 @@
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* === Header === */
+.header {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+  border-bottom: 3px solid #FFC700;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  max-width: 180px;
+  height: auto;
+}
+
+.nav-links {
+  margin-top: 10px;
+}
+
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #FFC700;
+}
+
+/* === Hero Section === */
+.hero {
+  background: url('https://cdn2.dropmarkusercontent.com/52043/82f7a531c849679c3b8048f3e643f679d20ca0d60fc532d896cec6439947d69b/preview/Ambote-CharityWater-08693.jpg?Expires=1757289611&Signature=BTXYkW~QFNE370jZxa7AKjkuyTG5MzIP3NxfmHjWblZSS5P17mzDCX2WYNxbLpSqx7-K-jEhFnWV3a-gLY5GXZtFPYugRDUFlqj-HCU0YxmH8YUW7L18ZWCRPNW3bykZsMR7gKhgkmhhd2SDdRPeqoGl4K1N6Pd2iFZJPdNcf8PfEXSvB1plfR~zzGrIXvPmSLqSYLD7LDhZlZrxdvLY9V5wc7oEDJxm1T~VAy9pdHdSnwOUF~ceQKBZAQSVFb0FA4ujfMgvH-tTkKzeVH2VuluGQLZ9Sc2FDAKtIrMOySTNA6TELLHTckpOsLUCcteJWTHmFGTAAyztqMSIUVJAgQ__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ') 
+  no-repeat center/cover;
+  color: #ffffff;
+  min-height: 600px;
+  padding: 100px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+/* Dark overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-content h1, .hero-content p {
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+/* CTA Button */
+.cta-button {
+  background-color: #FFC700;
+  color: #000000;
+  padding: 14px 28px;
+  text-decoration: none;
+  border: 2px solid #000000;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  width: max-content;
+}
+
+.cta-button:hover {
+  background-color: #e6c700;
+  transform: scale(1.05);
+}
+
+/* === About Section === */
+.about {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-text {
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+.about-text h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.about-text p {
+  font-size: 1.15rem;
+  color: #333333;
+  line-height: 1.8;
+}
+
+/* Gallery of 3 images */
+.about-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-gallery img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* === Donate Section === */
+.donate {
+  background-color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.donate-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.donate-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* === Responsive Styling === */
+@media (max-width: 900px) {
+  .about-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-gallery img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
